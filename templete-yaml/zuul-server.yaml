@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: zuul-server
-  namespace: test
+  namespace: springcloud
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       initContainers:
       - name: init-eureka
-        image: registry.ekos.local/library/zuul-server
+        image: mirror.ghostcloud.cn/microservice/zuul-server:1.0
         command:
         - sh
         - "-c"
@@ -39,7 +39,7 @@ spec:
       - env:
         - name: CONFIG_SERVICE_NAME
           value: config-server
-        image: registry.ekos.local/library/zuul-server
+        image: mirror.ghostcloud.cn/microservice/zuul-server:1.0
         name: zuul-server
         resources:
           limits:
@@ -60,7 +60,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: zuul-config
-  namespace: test
+  namespace: springcloud
 data:
   application.yml: |
    server:
