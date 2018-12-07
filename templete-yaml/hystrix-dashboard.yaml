@@ -15,7 +15,7 @@ spec:
     spec:
       initContainers:
       - name: init-eureka
-        image: registry.ekos.local/library/hystrix-dashboard
+        image: mirror.ghostcloud.cn/microservice/hystrix-dashboard:1.0
         command:
         - sh
         - "-c"
@@ -39,7 +39,7 @@ spec:
       - env:
         - name: CONFIG_SERVICE_NAME
           value: config-server
-        image: registry.ekos.local/library/hystrix-dashboard
+        image: mirror.ghostcloud.cn/microservice/hystrix-dashboard:1.0
         name: hystrix-dashboard
         resources:
           limits:
