@@ -15,7 +15,7 @@ spec:
     spec:
       initContainers:
       - name: init-eureka
-        image: registry.ekos.local/library/eureka-admin
+        image: mirror.ghostcloud.cn/microservice/eureka-admin:1.0
         command:
         - sh
         - "-c"
@@ -39,7 +39,7 @@ spec:
       - env:
         - name: DISCOVERY_SERVICE_NAME
           value: eureka
-        image: registry.ekos.local/library/eureka-admin
+        image: mirror.ghostcloud.cn/microservice/eureka-admin:1.0
         name: eureka-admin
         resources:
           limits:
