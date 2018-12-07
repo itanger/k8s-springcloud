@@ -23,7 +23,7 @@ spec:
           value: "123123"
         - name: RABBITMQ_DEFAULT_VHOST
           value: prontera
-        image: registry.ekos.local/library/rabbitmq:3.6.6-management
+        image: mirror.ghostcloud.cn/microservice/rabbitmq:3.6.6-management:1.0
         name: rabbitmq-server
         resources:
           limits:
