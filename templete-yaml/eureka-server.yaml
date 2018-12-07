@@ -15,7 +15,7 @@ spec:
         ekos-app: eureka
     spec:
       containers:
-      - image: registry.newben.net/library/eureka-server
+      - image: mirror.ghostcloud.cn/microservice/eureka-server:1.0
         name: eureka
         resources:
           limits:
