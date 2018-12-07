@@ -15,7 +15,7 @@ spec:
     spec:
       initContainers:
       - name: init-eureka
-        image: registry.ekos.local/library/config-server
+        image: mirror.ghostcloud.cn/microservice/config-server:1.0
         command:
         - sh
         - "-c"
@@ -68,7 +68,7 @@ spec:
           value: chris
         - name: rabbitmq_password
           value: "123123"
-        image: registry.ekos.local/library/config-server
+        image: mirror.ghostcloud.cn/microservice/config-server:1.0
         name: config-server
         resources:
           limits:
